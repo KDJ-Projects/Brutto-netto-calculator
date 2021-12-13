@@ -1,6 +1,5 @@
 import tkinter as tk
 from tkinter import ttk
-from tkinter.constants import NUMERIC
 
 window = tk.Tk()
 window.title("Bruto - Netto bereking")
