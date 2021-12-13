@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 
 window = tk.Tk()
-window.title("Bruto - Netto bereking")
+window.title("Bruto - Netto berekening")
 window.geometry("+1615+400")
 
 def brutto_netto_calc():
@@ -80,7 +80,7 @@ def brutto_netto_calc():
     rsz_procent_lbl = ttk.Label(popup, text=f"{rsz_month_amount} €")
     rsz_procent_lbl.grid(row=2, column=1, sticky="E", padx=(0, 10), pady=(0, 10))
 
-    rsz_special_net_contribution_description_lbl = ttk.Label(popup, text="Bijzondere rsz bijdrag:")
+    rsz_special_net_contribution_description_lbl = ttk.Label(popup, text="Bijzondere rsz bijdrage:")
     rsz_special_net_contribution_description_lbl.grid(row=3, column=0, sticky="W", padx=(10, 10), pady=(0, 10))
     rsz_special_net_contribution_amount_lbl = ttk.Label(popup, text=f"{rsz_special_contribution} €")
     rsz_special_net_contribution_amount_lbl.grid(row=3, column=1, sticky="E", padx=(0, 10), pady=(0, 10))
@@ -135,26 +135,26 @@ days_worked_description_lbl.grid(row=1, column=0, sticky="W", padx=(20, 0), pady
 days_worked_amount_entry = ttk.Entry(window, width=5)
 days_worked_amount_entry.grid(row=1, column=1, sticky="E", padx=(0, 20), pady=(10, 0))
 
-daily_meal_fee_description_lbl = ttk.Label(window, text="Maaltijd vergoeding bedrag:")
+daily_meal_fee_description_lbl = ttk.Label(window, text="Bedrag maaltijd vergoeding:")
 daily_meal_fee_description_lbl.grid(row=2, column=0, sticky="W", padx=(20, 0), pady=(5, 0))
 daily_meal_fee_amount_entry = ttk.Entry(window, width=5)
 daily_meal_fee_amount_entry.grid(row=2, column=1, sticky="E", padx=(0, 20), pady=(10, 0))
 
-daily_road_fee_description_lbl = ttk.Label(window, text="Baan vergoeding bedrag:")
+daily_road_fee_description_lbl = ttk.Label(window, text="Bedrag baan vergoeding:")
 daily_road_fee_description_lbl.grid(row=3, column=0, sticky="W", padx=(20, 0), pady=(5, 0))
 daily_road_fee_amount_entry = ttk.Entry(window, width=5)
 daily_road_fee_amount_entry.grid(row=3, column=1, sticky="E", padx=(0, 20), pady=(10, 0))
 
-monthly_carwash_GSM_expences_fee_description_lbl = ttk.Label(window, text="Vergoeding maand bedrag:")
+monthly_carwash_GSM_expences_fee_description_lbl = ttk.Label(window, text="Vergoeding carwash-gsm-onkosten:")
 monthly_carwash_GSM_expences_fee_description_lbl.grid(row=4, column=0, sticky="W", padx=(20, 0), pady=(5, 0))
 monthly_carwash_GSM_expences_fee_amount_entry = ttk.Entry(window, width=5)
 monthly_carwash_GSM_expences_fee_amount_entry.grid(row=4, column=1, sticky="E", padx=(0, 20), pady=(10, 0))
 
 ## BUTTONS MAIN ##
 calculate_btn = ttk.Button(window,text="Bereken", command=brutto_netto_calc)
-calculate_btn.grid(row=5, column=0, padx=(0, 0), pady=(10, 10))
+calculate_btn.grid(row=5, column=0, sticky="W", padx=(50, 0), pady=(10, 10))
 
 quit_btn = ttk.Button(window, text="Sluit", command=window.destroy)
-quit_btn.grid(row=5, column=1, padx=(0, 30), pady=(10, 10))
+quit_btn.grid(row=5, column=1, sticky="E", padx=(0, 50), pady=(10, 10))
 
 window.mainloop()
