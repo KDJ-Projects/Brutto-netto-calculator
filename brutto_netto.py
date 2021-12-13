@@ -53,9 +53,6 @@ def brutto_netto_calc():
     # Calculation for total monthly net fees
     net_total_fees = total_daily_meal_fee + total_daily_road_fee + monthly_carwash_GSM_expences_fee
 
-    # Company car (benefit in kind)
-    car = 325
-
     # Calculation for net monthly salary
     net_taxable_wages = (gross_monthly_salary - rsz_month_amount)
     monthly_witholding_tax = 36.811227424364431 / 100
