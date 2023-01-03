@@ -7,7 +7,7 @@ Usage:
 
 from setuptools import setup
 
-APP = ['main.py']
+APP = ['app.py']
 DATA_FILES = []
 OPTIONS = {
     'iconfile':'salary.png',
