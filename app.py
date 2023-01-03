@@ -3,7 +3,7 @@ from tkinter import ttk
 
 window = tk.Tk()
 window.title("Bruto - Netto berekening")
-window.geometry("+1615+400")
+window.geometry("-3000+300")
 
 def brutto_netto_calc():
    
@@ -27,7 +27,7 @@ def brutto_netto_calc():
     except Exception:
             error = tk.Toplevel(window)
             error.title("Error")
-            error.geometry("+1700+430")
+            error.geometry("-3085+360")
 
             error_warning_lbl = ttk.Label(error, text="Geef waardes in!", foreground="red")
             error_warning_lbl.grid(row=0, column=0, columnspan=2, padx=(10, 10), pady=(10, 5))
@@ -67,7 +67,7 @@ def brutto_netto_calc():
     # Popup window for amounts
     popup = tk.Toplevel(window)
     popup.title("Loon en vergoedingen")
-    popup.geometry("+1612+700")
+    popup.geometry("-3085+360")
 
     ## LABELS POPUP ##
     gross_month_description_lbl = ttk.Label(popup, text="Bruto maand verloning:")
